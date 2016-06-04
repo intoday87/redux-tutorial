@@ -28,21 +28,21 @@
 // Where do I keep all the data regarding my application along its lifetime?
 // 어느 곳에서 내가 내 어플리케이션의 일생주기 동안에 간주되는(속하는) 모든 데이터들을 유지해야 하는가?
 //     You keep it the way you want (JS object, array, Immutable structure, ...).
-//     넌느 너가 원하는 방법대로 그것을 유지한다.(JS 객체, 배열, 변경불가능한 구조, ...).
+//     너는 너가 원하는 방법대로 그것을 유지한다.(JS 객체, 배열, 변경불가능한 구조, ...).
 //     Data of your application will be called state. This makes sense since we're talking about
 //     너의 어플리케이션의 데이터는 상태로 불리어질 것이다. 이것은 우리가 모든 어플리케이션의 데이터는 시간이 지날 수록 진화한다는점에 관해
 //     all the application's data that will evolve over time, it's really the application's state.
-//     이야기를 나눌때 맞는 말이다. 그것은실제로 어플리케이션의 상태이다.
+//     이야기를 나눌때 맞는 말이다. 그것은 실제로 어플리케이션의 상태이다.
 //     But you hand it over to Redux (Redux is a "state container", remember?).
 //     그러나 너는 그것을 Redux에 제출한다. (Redux는 하나의 "상태 컨테이너"이다, 기억하는가?).
 // How do I handle data modifications?
 // 어떻게 데이터 수정들을 내가 다룰수 있을까?
 //     Using reducers (called "stores" in traditional flux).
-//     reducers를 사용하는 것(전통적인 flux에서는 "store"로 불린다.)
+//     reducers를 사용하는 것(전통적인 flux에서는 "stores"로 불린다.)
 //     A reducer is a subscriber to actions.
-//     하나의 reducer는 모든 액션들을 위한 구독자다.
+//     하나의 reducer는 액션들을 위한 구독자다.
 //     A reducer is just a function that receives the current state of your application, the action,
-//     하나의 reducuer는 단지 하나의 함수인데 너의 어플리케이션의 현재 상태그리고 액션을 받는 함수이다.
+//     하나의 reducuer는 단지 하나의 함수인데 너의 어플리케이션의 현재 상태 그리고 액션을 받는 함수이다.
 //     and returns a new state modified (or reduced as they call it)
 //     그리고 하나의 새로운 변경된 상태를 리턴한다. (또는 그들이 그것을 호출했을때 감소되는)
 // How do I propagate modifications to all parts of my application?
@@ -57,7 +57,7 @@
 //     1) a place to put your application state
 //     1) 어플리케이션의 상태를 추가(넣는) 하나의 장소
 //     2) a mechanism to dispatch actions to modifiers of your application state, AKA reducers
-//     2) 너의 어플리케이션 상태의 변경자들을 위해 액션을 처리할 수 있는 하나의 메커니즘
+//     2) 너의 어플리케이션 상태의 변경자들을 위해 액션을 처리할 수 있는 하나의 메커니즘, reducers라고 알려진
 //     3) a mechanism to subscribe to state updates
 //     3) 상태의 업데이트들에 대해 구독할 수 있는 메커니즘
 
