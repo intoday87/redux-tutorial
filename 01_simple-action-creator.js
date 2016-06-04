@@ -47,7 +47,7 @@ console.log(actionCreator())
 // What we need is to have this action be sent somewhere so that
 // 우리가 필요한 것은 이 액션이 어느 곳으로 보내지는 것인데
 // anyone interested could know that something happened and could act accordingly.
-// 관심있는 어느 누구든지 어떤 것이 일어났는지 그리고 그에 맞게 어떤 행동을 했는지 알 수 있기 위한 곳으로 말이다.
+// 관심있는 어느 누구든지 어떤 것이 일어났는지 그리고 그에 맞게 어떤 행동을 할 수 있었는지 알 수 있기 위한 곳으로 말이다.
 // We call this process "Dispatching an action".
 // 우리는 이 과정을 "액션을 수행하는것(Dispatching an action)"이라고 부른다.
 
