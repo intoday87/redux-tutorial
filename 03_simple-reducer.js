@@ -14,7 +14,7 @@
 // It's more simple than you could imagine: A Store keeps your data in it while a Reducer doesn't.
 // 그것은 너가 상상하는 것 보다 더 단순하다: 하나의 Store는 하나의 reducer가 그렇게 하지 않는 반면에 너의 데이터를 그것 안에 유지한다.
 // So in traditional flux, stores hold state in them while in Redux, each time a reducer is
-// 전통적인 flux 에서 stores는 상태를 그들안에서 유지하지만 반면에 Redux안에서 매시간 하나의 reducer는
+// 전통적인 flux 에서 stores는 상태를 그들안에서 유지하지만 반면에 Redux안에서, 매번 하나의 reducer는
 // called, it is passed the state that needs to be updated. This way, Redux's stores became
 // 호출되고, 업데이트가 되기를 필요로 하는 상태가 동과된다. 이 방식은, Redux의 stores는
 // "stateless stores" and were renamed reducers.
@@ -28,7 +28,7 @@ import { createStore } from 'redux'
 var store_0 = createStore(() => {})
 
 // ... so that Redux can call this function on your application state each time an action occurs.
-// ... Redux는 매시간 하나의 액션이 일어나는 너의 어플리케이션 상태에 대해서 이 함수를 호출 할 수 있기 위함이다.
+// ... Redux는 매번 하나의 액션이 일어나는 너의 어플리케이션 상태에 대해서 이 함수를 호출 할 수 있기 위함이다.
 // Giving reducer(s) to createStore is exactly how redux registers the action "handlers" (read reducers) we
 // reducer(s)를 createStore에게 주는 것은 정확히 어떻게 redux가 그 액션 "핸들러"(reducers라고 읽어라)를 등록하는지다.
 // were talking about in section 01_simple-action-creator.js.
