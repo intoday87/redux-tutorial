@@ -18,7 +18,7 @@ var reducer_0 = function (state = {}, action) {
 }
 
 // ... but before going further, we should start wondering what our reducer will look like when
-// ... 그러나 더 나아가지 전에, 우리는 reducer가 무엇을 닮고 있는지 의아해 하기 시작할 것이다.
+// ... 그러나 더 나아가지 전에, 우리는 우리의 reducer가 어떤 모습을 갖추어갈지 의아해 하기 시작할 것이다.
 // we'll have tens of actions:
 // 우리가 열개의 액션을 가질 때:
 
@@ -46,14 +46,14 @@ var reducer_1 = function (state = {}, action) {
 }
 
 // It becomes quite evident that a single reducer function cannot hold all our
-// 그것은 꽤 확실한 증거가 되었는데 한개의 reducer가 모든 우리 어플리케이션의 액션들에 대한 핸들링을 
+// 그것은 꽤 확실한 증거가 되었는데 한개의 reducer가 우리 어플리케이션의 모든 액션들에 대한 핸들링을 
 // application's actions handling (well it could hold it, but it wouldn't be very maintainable...).
 // 수용할 수 없다는 것을(물론 그것은 수용은 할 수 있다. 그러나 그것은 유지하기가 매우 힘들게 될 것이다...).
 
 // Luckily for us, Redux doesn't care if we have one reducer or a dozen and it will even help us to
 // 운좋게도, Redux는 한개의 Reducer를 가지든 한 다발을 가지든 신경쓰지 않는다 그리고 그것은 심지어 우리가 그들을 합치는데
 // combine them if we have many!
-// 도움을 주기까지한다. 만약 우리가 많은 reducer를 가지고 있다면.
+// 도움을 주기까지한다. 만약 우리가 많은 reducer를 가지고 있다면!
 
 // Let's declare 2 reducers
 // reducers 2를 선언해 보자.
@@ -84,32 +84,32 @@ var itemsReducer = function (state = [], action) {
 // itemsReducer got an initial state in the form of an array ([]). This is just to
 // itemReducer는 초기화 상태로 배열([]) 행태를 가지고 있다. 이것은 단지 
 // make clear that a reducer can actually handle any type of data structure. It's really
-// reducer가 어떤 형태의 데이터 구조를 다룰 수 있는지 실제로 명확하게 만들어준다. 그것은 정말로
+// reducer가 어떠한 형태의 데이터 구조든 다룰 수 있다는것을 실제로 명확하게 만들어준다. 그것은 정말로
 // up to you to decide which data structure suits your needs (an object literal, an array,
 // 어떤 데이터 구조가 너에게 필요한지 결정하는 것은 너에게 달려있다.(하나의 객체 리터럴이든, 하나의 배열이든,
 // a boolean, a string, an immutable structure, ...).
 // 불리언이든, 문자열이든, 불변 구조이든, ...).
 
 // With this new multiple reducer approach, we will end up having each reducer handle only
-// 이 새로운 다중 reducer 접근으로, 우리는 결국에 각각의 reducer가 우리 어플리케이션의
+// 이 새로운 다중 reducer 접근으로, 우리는 결국에 각각의 reducer가 우리 어플리케이션 상태의
 // a slice of our application state.
-// 한 조각(부분)을 다루게 될 것이다.
+// 한 조각(부분)을 다루는 것이라는 것이다.
 
 // But as we already know, createStore expects just one reducer function.
 // 그러나 우리가 이미 알고있듯이, createStore는 단지 하나의 reducer 함수를 기대한다.
 
 // So how do we combine our reducers? And how do we tell Redux that each reducer will only handle
-// 그래서 어떻게 우리는 우리의 reducer를 합칠것 인가? 그리고 어떻게 우리는 Redux가 각각의 reducer로 우리 상태의 오직
+// 그래서 어떻게 우리는 우리의 reducer들을 합칠것 인가? 그리고 어떻게 우리는 Redux가 각각의 reducer로 우리 상태의 오직
 // a slice of our state?
 // 한 조각만을 다룰 수 있다고 말할 수 있는가?
 // It's fairly simple. We use Redux combineReducers helper function. combineReducers takes a hash and
-// 그것은 꽤 단순하다. 우리는 Redux의 헬퍼 함수인 combineReducers를 사용한다. combineReducers 하나의 해시를 가진다. 그리고
+// 그것은 꽤 단순하다. 우리는 Redux의 헬퍼 함수인 combineReducers를 사용한다. combineReducers는 하나의 해시를 가진다. 그리고
 // returns a function that, when invoked, will call all our reducers, retrieve the new slice of state and
-// 그 함수를 리턴한다. 호출되었을 때, 모든 우리의 reducer들을 호출할 것이다. 새로운 상태의 조각을 추출하고 그리고
+// 하나의 함수를 리턴한다. 호출되었을 때, 모든 우리의 reducer들을 호출할 것이다. 새로운 상태의 조각을 추출하고 그리고
 // reunite them in a state object (a simple hash {}) that Redux is holding.
-// 그들을 Redux가 유지하고 있는 하나의 상태 객체로 재결합한다.(하나의 단순한 해시 {})
+// Redux가 유지하고 있는 하나의 상태 객체로 그들을 재결합한다.(하나의 단순한 해시 {})
 // Long story short, here is how you create a Redux instance with multiple reducers:
-// 이야기를 간추려서 짧게 하자면, 여기 어떻게 Redux 인스턴스를 다중 reducers와 함께 생성하는지 있다.
+// 이야기를 간추려서 짧게 하자면, 여기 어떻게 Redux 인스턴스를 다중 reducers와 함께 생성하는지가 나와 있다.
 
 import { createStore, combineReducers } from 'redux'
 
@@ -128,7 +128,7 @@ var store_0 = createStore(reducer)
 // itemsReducer was called with state [] and action { type: '@@redux/INIT' }
 
 // As you can see in the output, each reducer is correctly called with the init action @@redux/INIT.
-// 너가 겨로가에서 보았듯, 각각의 reducer는 정확하게 초기화 액션 @@redux/INIT과 함께 호출 되었다.
+// 너가 결과에서 보았듯, 각각의 reducer는 정확하게 초기화 액션 @@redux/INIT과 함께 호출 되었다.
 // But what is this other action? This is a sanity check implemented in combineReducers
 // 그러나 이 다른 액션들은 무엇인가? 이것은 combineReducers에서 구현된 하나의 안전 체크이다.
 // to assure that a reducer will always return a state != 'undefined'.
@@ -144,7 +144,7 @@ console.log('store_0 state after initialization:', store_0.getState())
 // It's interesting to note that Redux handles our slices of state correctly,
 // Redux가 우리 상태의 조각들을 정확하게 다루는것에 주목하는것은 흥미롭다.
 // the final state is indeed a simple hash made of the userReducer's slice and the itemsReducer's slice:
-// 초기화 상태는 실재로 단순한 userReducer의 조각 그리고 itemReducer의 조각으로 만들어진 단순한 해시다:
+// 그 최종 상태는 실제로 단순한 userReducer의 조각 그리고 itemReducer의 조각으로 만들어진 단순한 해시다:
 // {
 //     user: {}, // {} is the slice returned by our userReducer
 //     items: [] // [] is the slice returned by our itemsReducer
@@ -156,6 +156,9 @@ console.log('store_0 state after initialization:', store_0.getState())
 // 최종 Redux 상테에서 발견된 이 값들은 우연이 아니다. 
 
 // By now we have a good idea of how reducers will work. It would be nice to have some
+// 지금쯤 우리는 어떻게 reducer들이 작동하는지에 대한 좋은 생각을 가지고 있다. 수행되는 어떤 액션들을 가지는 것 
 // actions being dispatched and see the impact on our Redux state.
+// 그리고 우리의 Redux 상태에 대한 그 영향을 보는것은 좋은것이다.
 
 // Go to next tutorial: 06_dispatch-action.js
+// 다음 튜토리얼로 가라: 06_dispatch-action.js
