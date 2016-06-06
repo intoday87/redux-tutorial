@@ -134,8 +134,9 @@ var store_0 = createStore(reducer)
 // to assure that a reducer will always return a state != 'undefined'.
 // 하나의 reducer는 언제나 state != 'undefined'를 리턴할 것이라고 확실히하기 위해서. 
 // Please note also that the first invocation of init actions in combineReducers share the same purpose
-// 부디 또한 주목해라. combineReducers안에서 첫 번째 초기화 액션들의 호출은 랜덤 액션들로서 같은 목적을 공유한다.(안전성 체크를 하기 위한)
+// 부디 또한 주목해라. combineReducers안에서 첫 번째 초기화 액션들의 호출은 
 // as random actions (to do a sanity check).
+// 랜덤 액션들과 마찬가지로 같은 목적을 공유한다.(안전성 체크를 하기 위한)
 
 console.log('store_0 state after initialization:', store_0.getState())
 // Output:
