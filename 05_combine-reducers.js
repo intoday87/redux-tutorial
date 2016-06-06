@@ -142,14 +142,18 @@ console.log('store_0 state after initialization:', store_0.getState())
 // store_0 state after initialization: { user: {}, items: [] }
 
 // It's interesting to note that Redux handles our slices of state correctly,
+// Redux가 우리 상태의 조각들을 정확하게 다루는것에 주목하는것은 흥미롭다.
 // the final state is indeed a simple hash made of the userReducer's slice and the itemsReducer's slice:
+// 초기화 상태는 실재로 단순한 userReducer의 조각 그리고 itemReducer의 조각으로 만들어진 단순한 해시다:
 // {
 //     user: {}, // {} is the slice returned by our userReducer
 //     items: [] // [] is the slice returned by our itemsReducer
 // }
 
 // Since we initialized the state of each of our reducers with a specific value ({} for userReducer and
+// 명확한 값으로(userReducer는 {} 그리고 itemsReducer는 []) 각각의 우리의 reducer들의 상태를 초기화 했기 때문에 
 // [] for itemsReducer) it's no coincidence that those values are found in the final Redux state.
+// 최종 Redux 상테에서 발견된 이 값들은 우연이 아니다. 
 
 // By now we have a good idea of how reducers will work. It would be nice to have some
 // actions being dispatched and see the impact on our Redux state.
