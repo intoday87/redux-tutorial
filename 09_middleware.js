@@ -1,46 +1,69 @@
 // Tutorial 09 - middleware.js
 
 // We left dispatch-async-action-2.js with a new concept: "middleware". Somehow middleware should help us
+// 우리는 dispatch-async-action-2.js에서 새로운 컨셉을 남겨놨다: "미들웨어". 어떻게 미들웨어는 비동기 액션 핸들링을 해결하기
 // to solve async action handling. So what exactly is middleware?
+// 위해 우리를 도울 수 있나. 그래서 정확히 미들웨어는 뭘까?
 
 // Generally speaking middleware is something that goes between parts A and B of an application to
+// 일반적으롬 말하자면 미들웨어는 어플리케이션에서 부품(모듈, 컴퍼넌트인 듯) A와 B사이의
 // transform what A sends before passing it to B. So instead of having:
+// A가 B로 건내주기 위한 무엇을 변형하기위한 것이다. 그래서 가지는 것 대신에:
 // A -----> B
 // we end up having
+// 우리는 결국 가진다.
 // A ---> middleware 1 ---> middleware 2 ---> middleware 3 --> ... ---> B
 
 // How could middleware help us in the Redux context? Well it seems that the function that we are
+// 어떻게 미들웨어는 Redux 문맥(context)안에서 우리를 도울 수 있을까? 음 그것은 우리가 비동기 액션 생성자로부터
 // returning from our async action creator cannot be handled natively by Redux but if we had a
+// 리턴한 그 함수는 선천적으로 Redux에 의해서 다루어질 수 없다. 그러나 만약 우리가 액션 생성자와 우리의 reducer들
 // middleware between our action creator and our reducers, we could transform this function into something
+// 사이에 미들웨어를 가진다면, 우리는 이 함수를 Redux에 알맞은 어떤 것으로 변형할 수 있다.
 // that suits Redux:
 
 // action ---> dispatcher ---> middleware 1 ---> middleware 2 ---> reducers
 
 // Our middleware will be called each time an action (or whatever else, like a function in our
+// 우리의 미들웨어는 매시간 호출될 것이다. 하나의 액션(또는 뭐든지 간에, 우리 비동기 액션 생성자의 경우 하나의 함수)
 // async action creator case) is dispatched and it should be able to help our action creator
+// 은 수행된다 그리고 그것은 우리의 액션 생성자가 실제 액션을 그것이 원할 때 수행할 수 있도록
 // dispatch the real action when it wants to (or do nothing - this is a totally valid and
+// 돕는다(또는 아무것도 하지 않는다 - 이것은 하나의 전체적으로 유효하고
 // sometimes desired behavior).
+// 때때로 바람직한 행동이다).
 
 // In Redux, middleware are functions that must conform to a very specific signature and follow
+// Redux에서, 미들웨어는 함수들인데 반드시 매우 명확한 서명을 확인하고
 // a strict structure:
+// 엄격한 구조를 따른다:
 /*
     var anyMiddleware = function ({ dispatch, getState }) {
         return function(next) {
             return function (action) {
                 // your middleware-specific code goes here
+                // 너의 미들웨어의 구체적인 코드는 여기에
             }
         }
     }
 */
 
 // As you can see above, a middleware is made of 3 nested functions (that will get called sequentially):
+// 너가 위에서 볼 수 있듯이, 미들웨어는 3개의 중첩된 함수들이다 (그것은 순서적으로 호출될 것이다)
 // 1) The first level provide the dispatch function and a getState function (if your
+// 1) 첫번째 레벨은 수행 함수 그리고 하나의 getState 함수를 제공한다. (만약 너가
 //     middleware or your action creator needs to read data from state) to the 2 other levels
+//     미들웨어 또는 액션 생성자가 상태로부터 데이터를 읽기를 원한다면) 2 레벨의 다른 함수까지.
 // 2) The second level provide the next function that will allow you to explicitly hand over
+// 2) 두 번째 레벨은 next 함수를 제공하는데 그것은 너가 너에게 명확하게 변형된 데이터를 다음 미들웨어에게 전달하는 것을
 //     your transformed input to the next middleware or to Redux (so that Redux can finally call all reducers).
+//     또는 Redux에게 허용한다 (그래서 Redux는 마침내 모든 reducer들을 호출 할 수 있다).
 // 3) the third level provides the action received from the previous middleware or from your dispatch
+// 3) 세 번째 레벨은 이전의 미들웨어 또는 너의 dispatch로 부터 받은 액션을 제공한다
 //     and can either trigger the next middleware (to let the action continue to flow) or process
+//     그리고 마찬가지로 그 다음 미들웨어를 호출할 수 있다(그 액션이 흐름을 지속하는 것을 허락하기 위해서) 또는  
 //     the action in any appropriate way.
+//     액션을 어떤 적당한 방법으로 처리한다.
 
 // Those of you who are trained to functional programming may have recognized above an opportunity
 // to apply a functional pattern: currying (if you aren't, don't worry, skipping the next 10 lines
