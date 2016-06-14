@@ -66,10 +66,14 @@
 //     액션을 어떤 적당한 방법으로 처리한다.
 
 // Those of you who are trained to functional programming may have recognized above an opportunity
+// 함수형 프로그래밍에 훈련된 사람들이라면 아마 위에서 함수적 패턴을 적용할 기회를 엿봤을 것이다.
 // to apply a functional pattern: currying (if you aren't, don't worry, skipping the next 10 lines
+// :currying (만약 그렇지 않다고 해도 걱정마라, 다음에 오는 10줄을 넘긴다고 해서 redux에 대한 이해도에
 // won't affect your redux understanding). Using currying, you could simplify the above function like that:
+// 영향을 미치지 않는다.). currying을 사용해서 너는 다음과 같이 저 위의 함수를 단순화 할 수 있다.:
 /*
     // "curry" may come any functional programming library (lodash, ramda, etc.)
+    // "curry" 아마 함수적 프로그래밍 라이브러리들은 지원할 것이다.(lodash, ramda, etc.)
     var thunkMiddleware = curry(
         ({dispatch, getState}, next, action) => (
             // your middleware-specific code goes here
@@ -95,10 +99,14 @@ var thunkMiddleware = function ({ dispatch, getState }) {
 }
 
 // To tell Redux that we have one or more middlewares, we must use one of Redux's
+// Redux에게 우리는 하나 이상의 미들웨어들을 가지고 있다고 말하기 위해서는, 우리는 반드시 Redux의 헬퍼
 // helper functions: applyMiddleware.
+// 함수들을 사용해야 한다: applyMiddleware.
 
 // "applyMiddleware" takes all your middlewares as parameters and returns a function to be called
+// "applyMiddleware"는 파라미터로 모든 너의 미들웨어들을 수용한다 그리고 Redux의 createStore와 함께
 // with Redux createStore. When this last function is invoked, it will produce "a higher-order
+// 호출될 하나의 함수를 리턴한다. 이 함수가 마지막에 호출 되었을 때, 그것은
 // store that applies middleware to a store's dispatch".
 // (from https://github.com/rackt/redux/blob/v1.0.0-rc/src/utils/applyMiddleware.js)
 
