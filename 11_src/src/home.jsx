@@ -1,12 +1,17 @@
 // Tutorial 12 - Provider-and-connect.js
 
 // Our tutorial is almost over and the only missing piece to leave you with a good overview of Redux is:
+// 우리의 튜토리얼은 이제 거의 끝났다 그리고 너에게 Redux에 대한 좋은 개관과 함께 남겨놓은 유일하게 놓치고 있는 조각은:
 // How do we read from our store's state and how do we dispatch actions?
+// 어떻게 store의 상태로부터 우리는 읽을 것인가 그리고 어떻게 액션을 dispatch 하나?
 
 // Both of these questions can be answered using a single react-redux's binding: connect.
+// 이 두 질문은 하나의 react-redux의 바인딩을 사용함으로써 대답이될 수 있다.: connect.
 
 // As we previously explained, when using the Provider component we allow all components of our app to
+// 우리가 이전에 설명한것에 따르면, Provider 컴포넌트를 사용할 때 우리는 우리의 앱의 모든 컴포넌트를 Redux에 접근하는 것을
 // access Redux. But this access can only be made through the undocumented feature "React's context". To
+// 허용한다.
 // avoid asking you to use such a "dark" React API, React-Redux is exposing a function that you can use
 // on a component class.
 
