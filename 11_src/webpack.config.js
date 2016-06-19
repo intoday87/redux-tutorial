@@ -4,6 +4,7 @@ var webpack = require('webpack')
 var webpackDevHost = 'localhost'
 
 module.exports = function (webpackDevPort) {
+  console.log('directory is ' + __dirname);
   return {
     devtool: 'eval',
     entry: [
