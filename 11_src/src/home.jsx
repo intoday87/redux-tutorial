@@ -101,19 +101,23 @@ class Home extends React.Component {
     // We use here the dispatch function "automatically" provided by connect in a prop.
     // 우리는 여기서 connect가 prop안에서 "자동적으로" 제공된 수행 함수(dispatch function)을 사용한다.
     // There are alternative ways to call actionCreators that are already bound to dispatch and those
-    // 
+    // 수행(dispatch)하기 위해 이미 제한된 액션 생성자들을 호출하기위한 대안적인 방법이 있다 그리고 이것은 두 번째
     // imply providing the second parameter to 'connect':
+    // 파라마터 'connect'를 제공하는 것을 암시한다:
     // https://github.com/rackt/react-redux/blob/v4.0.0/docs/api.md#connectmapstatetoprops-mapdispatchtoprops-mergeprops-options
     // The "delay" value given to actionCreators.getTime is a delay to simulate an async work being done before we
+    // actionCreators.getTime에 주어지는 "delay" 값은 우리가 현재 시간에 얻게 할 수 있는것 전에 하나의 비동기 작업이 행해지는 것을
     // are able to get the current time. Try to change this value to verify that the delay correctly impacts our UI.
+    // 가장하기 위한 값이다. 그 지연이 정확하게 우리의 UI에 영향을 미치는지 검증하기 위해서 이 값을 바꾸는 것을 시도해봐라.
     this.props.dispatch(actionCreators.getTime(delay))
   }
   render () {
 
     // Thanks to "connect", we're able to get specific selected data, through the props.
+    // "connect" 덕분에, 우리는 명확하게 선택된 데이터 값을 얻을 수 있게 된다. 그 props를 통해서.
     var { frozen, time, reduxState } = this.props
     var attrs = {}
-    const DELAY = 500 // in ms
+    const DELAY = 500 // in ms //원본 77번째 라인
 
     if (frozen) {
         attrs = {
@@ -130,10 +134,13 @@ class Home extends React.Component {
         <br /> <br />
         <i>
           When clicking the button below, the time will be provided after a {DELAY}ms delay.<br />
-          Try to change this value (in <b>src/home.jsx - line 77</b>) to verify that the delay given correctly impacts our UI.
+          아래의 버튼을 클릭했을때, 그 시간은 {DELAY}ms 지연 후에 제공될 것이다.<br />
+          Try to change this value (in <b>src/home.jsx - line 120</b>) to verify that the delay given correctly impacts our UI.
+          이 값을 바꾸도록 시도해 봐라 (src/home.jsx - line 120에서) 그 지연이 정확하게 우리의 UI에 영향을 미치는지 검증하기 위해서.
         </i>
         <br />
         {/* We register our button "onClick" handler here: */}
+        {/* 우리는 우리의 버튼 "onClick" 핸들러를 여기서 등록한다: */}
         <button { ...attrs } onClick={() => this.onTimeButtonClick(DELAY)}>Get time!</button>
         <pre>
           redux state = { JSON.stringify(reduxState, null, 2) }
@@ -144,7 +151,9 @@ class Home extends React.Component {
 }
 
 // This is our select function that will extract from the state the data slice we want to expose
+// 이것은 우리의 select 함수인데 우리의 컴포넌트에서 props를 통해서 우리가 노출시키기를 원하는 데이터 조각의 상태를 
 // through props to our component.
+// 추출할 것이다.
 const mapStateToProps = (state/*, props*/) => {
   return {
     frozen: state._time.frozen,
