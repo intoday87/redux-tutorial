@@ -28,7 +28,7 @@ It is required for you to know a bit of ES6 and ES7 (Object Spread) to correctly
 ### 튜토리얼을 브라우즈해라
 
 This tutorial is split into a sequence of javascript files that are intended to be read in order.
-이 튜토리얼은 자바스크립트 파일들의 한 순서로 쪼개져 있다. 그 파일들은 순서대로 읽도록 의도되어 있다.
+이 튜토리얼은 순서대로 읽히도록 의도되어있는 자바스크립트 파일들의 순서로 쪼개져 있다.
 
 Start with the first tutorial: [Introduction](00_introduction.js)
 첫 번째 튜토리얼을 시작해라: [Introduction](00_introduction.js)
