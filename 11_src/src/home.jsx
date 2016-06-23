@@ -197,18 +197,18 @@ export default ConnectedHome
 // ./12_final-words.js로 가기 전에, 이 "connect"의 HOC를 사용하기 위한 대안적인 하나의 방법에 관한 side-note(?)를 읽어라...
 
 // Because connect(...) returns a function that accept a class and returns another class, you can use it as
-// 왜냐하면 connect(...)은 하나의 클래스를 수용하는 하나의 함수를 리턴한다 그리고 또 다른 클래스를 리턴한다, 너는 그것을 ES7 장식자로서 너가 원한다면
+// connect(...)은 하나의 클래스를 수용하는 하나의 함수를 리턴하고 그리고 또 그것은 또 다른 클래스를 리턴하기 때문에, 너가 원한다면 너는 그것을 ES7 장식자로서
 // an ES7 decorator if you want to. Decorators are an experimental ES7 features that make it possible to annotate
 // 사용할 수 있다. 장식자들은 하나의 실험적인 ES7 특정들인데 주석을 달거나 클래스와 프로퍼티들을 
 // and modify classes and properties at design time (https://github.com/wycats/javascript-decorators).
-// 디자인 시간(?)d에 수정할 수 있도록 해준다. (https://github.com/wycats/javascript-decorators).
+// 설계하는 시점에 수정할 수 있도록 해준다. (https://github.com/wycats/javascript-decorators).
 
 // This feature being experimental, it is subject to change and breakage. This means that by using it today, you must be
-// 이 특징은 실험적인데, 그것은 변화와 파손에 적용된다. 이것 수단은 그것을 사용함으로써 오늘날 , 너는 반드시 전체적으로
+// 이 실험적인 특징, 그것은 변화와 쪼개짐(breakage)에 대상이다. 오늘날 이것을 사용함으로써 이것은 의미한다, 너는 반드시 완전히
 // fully aware of and accept the uncertainty regarding its evolution. Decorators provide syntax sugar to write the
-// 인식해야하고 그리고 그것의 진화에 관하여 불확실성을 받아들여야 한다. Decorators는 문법 슈가(?)를 제공한다. 
+// 인식해야하고 그리고 그것의 진화에 관하여 불확실성을 받아들여야 한다. Decorator들은 syntax sugar(프로그래밍 언어에서 어떤 것을 더 쉽게 제공하기 위한 문법)를 제공한다.
 // code above slightly differently. Instead of writing:
-// 저 위의 코드를 약간 다르게 쓰기위해서, 이렇게 쓰는 것 대신에:
+// 저 위의 코드를 약간 다르게 쓰기위하여, 이렇게 쓰는 것 대신에:
 
 /*
   class MyClass {}
@@ -223,6 +223,7 @@ export default ConnectedHome
 */
 
 // Applying this syntax to redux connect, you can replace:
+// 이 문법을 redux connect에 적용해서, 너는 대체할 수 있다:
 
 /*
   let mapStateToProps = (state) => { ... }
@@ -231,6 +232,7 @@ export default ConnectedHome
 */
 
 // by:
+// 아래에 의해서:
 
 /*
   let mapStateToProps = (state) => { ... }
@@ -239,9 +241,15 @@ export default ConnectedHome
 */
 
 // As you can see the application of the HOC function on the component class is now made implicit ( @connect(mapStateToProps) )
+// 너가 그 컴포넌트에 대한 HOC 함수의 어플리케이션을 볼 수 있었듯이 클래스는 현재 암시적으로 만들어져 있다 ( @connect(mapStateToProps) )
 // instead of calling it ourselves ( @connect(mapStateToProps)(Myclass) ). Some find this approach more elegant, others
+// 그것을 그 자신으로 호출하는것 대신에 ( @connect(mapStateToProps)(Myclass) ). 몇몇은 이 접근을 더 우아다고 찾는다, 다른 이들은 
 // dislike the fact that it's hiding what is really happening and many just don't get how decorators works. Knowing all that
+// 그 사실을 싫어한다 그것은 정말로 일어나고 있는 일을 숨기고 있고 그리고 많이 단지 어떻게 decorator들이 동작하는지 알 수가 없다고 말이다. 그것에 대해 모두 알고
 // and remembering that decorators are still experimental, you can now decide by youselves which "connect" usage you
+// 그리고 decorator들은 여전히 실험적이라는 것을 기억하면서, 너는 너 자신이 어떤 "connect" 사용을 선호하는지 스스로 알고 연재 결정 할 수 있다 
 // prefer and you won't be suprised to find both syntax in the many articles, tutorials, starter kits, etc. out there.
+// 그리고 많은 기사들, 튜토리얼, 시작하기 킷 등등 바깥 어느 곳에서든 이 두 문법을 찾게 되었을때 놀라지 않게 될 것이다.
 
 // Go to ./12_final-words.js for our last advice about what to do now...
+// ./12_final-words.js로 가라. 무엇을 지금 해야할지에 대해 우리의 지난 조언을 위해서...
