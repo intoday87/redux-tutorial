@@ -1,20 +1,18 @@
 // Tutorial 12 - Provider-and-connect.js
 
-// Now is the time to meet the first binding that redux-react (https://github.com/rackt/react-redux)
-// 지금은 redux-react가 우리에게 가져다 줄 최초의 바인딩을 만나볼 시간이다.(https://github.com/rackt/react-redux)
+// Now is the time to meet the first binding that redux-react (https://github.com/reactjs/react-redux)
+// 지금은 redux-react가 우리에게 가져다 줄 최초의 바인딩을 만나볼 시간이다.(https://github.com/reactjs/react-redux)
 // brings to us: the Provider component.
 // : the Provider component.
 
 // Provider is a React Component designed to be used as a wrapper of your application's root component. Its
-// Provider는 React 컴포넌트인데 너의 어플리케이션 루트 컴포넌트의 하나의 래퍼로 사용되도록 디자인 되었다. 그것의
-// purpose is to provide your redux instance to all of your application's components. How it does that does not
-// 목적은 너의 redux 인스턴스를 너의 모든 어플리케이션 컴포넌트들에게 제공하기 위함이다. 어떻게 그것은
-// really matter to us but just to let you know, it's using React's context feature (it's undocumented so you
-// 실제로 우리에게 문제가 되지 않는가 그러나 단지 너에게 알게 하는것 말고, 그것은 React의 컨텍스트 특징을 사용한다.(그것은 문서화 되어 있지 않다
-//
-// don't have to know about it, but if you're curious:
-// 그래서 너는 그것에 대해 몰라도 된다. 그러나 만약 너가 궁금하다면:
-// https://www.tildedave.com/2014/11/15/introduction-to-contexts-in-react-js.html).
+// purpose is to provide your Redux instance to all of your application's components. How it does that does not
+// really matter to us but just to let you know, it's using React's "context" feature (it's an advanced and
+// experimental feature so you don't have to know about it, but if you're curious, here are few links to learn about it:
+// - https://www.tildedave.com/2014/11/15/introduction-to-contexts-in-react-js.html
+// - https://facebook.github.io/react/docs/context.html).
+// Documentation for Redux Provider is here:
+// https://github.com/reactjs/react-redux/blob/3.x/docs/api.md#provider-store
 
 import React from 'react'
 import Home from './home'

@@ -57,11 +57,11 @@ console.log(actionCreator())
 // 그리고 그 액션에 관심있는 어느 누구에게 하나의 액션이 일어났다고 알려주기 위해서, 우리는 "핸들러"를 등록하기위한 하나의 매커니즘을 필요로한다.
 // "handlers". Such "handlers" to actions in traditional flux application are called stores and
 // 액션들을 위한 이와 같은 전통적인 flux 어플리케이션의 "핸들러들"은 stores로 불리워 진다 그리고
-// we'll see in the next section how they are called in redux.
+// we'll see in the next section how they are called in Redux.
 // 우리는 다음 섹션에서 어떻게 redux에서 그들이 호출되는지를 보게될 것이다.
 
 // So far here is the flow of our application:
-// 지금까지 우리 어플리케이션의 흐름은 
+// 지금까지 우리 어플리케이션의 흐름은
 // ActionCreator -> Action
 
 // Read more about actions and action creators here:

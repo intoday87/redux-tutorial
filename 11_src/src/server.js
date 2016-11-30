@@ -16,15 +16,15 @@
 
 // But before we get to that, let's see the basic setup of this application and how it
 // 그러나 우리가 그것에 대해 알아보기 전에, 이 어플리케이션의 기본 설정과 어떻게 그것이
-// will be served to browser...
+// will be served to a browser...
 // 브라우저에 제공될 것인지에 대해 알아보자...
 
 // We won't use Express (http://expressjs.com/) in this app since we don't really need
-// 우리는 이 앱에서 Express를 사용하지 않을 것이다. 왜냐하면 우리는 정말로 
+// 우리는 이 앱에서 Express를 사용하지 않을 것이다. 왜냐하면 우리는 정말로
 // it to serve a simple html page.
 // 단순한 하나의 html 페이지를 제공할 것이기 때문에 필요가 없다.
 
-// "http" module will be used to create the http server
+// "http" module will be used to create the HTTP server
 // "http" 모듈은 http 서버를 생성하기 위해서 사용될 것이다.
 import http from 'http'
 import React from 'react'
@@ -46,8 +46,8 @@ var server = http.createServer(function(req, res) {
   // And of course, here is our Application HTML that we're sending back to the browser.
   // 그리고 물론, 여기에 우리의 어플리케이션의 HTML이 있는데 우리가 브라우저에 돌려보낼 것이다.
   // Nothing special here except the URI of our application JS bundle that points to our
-  // 여기서 특별한 것은 없다. 우리의 어플리케이션 JS 번들의 URI가 우리의 webpack 개발 서버를 가리키고  
-  // webpack dev server (located at http://localhost:5051)
+  // 여기서 특별한 것은 없다. 우리의 어플리케이션 JS 번들의 URI가 우리의 webpack 개발 서버를 가리키고
+  // Webpack dev server (located at http://localhost:5051)
   // 있다는 것만 제외하면 말이다.(located at http://localhost:5051)
   res.write(
     `<!DOCTYPE html>
@@ -67,9 +67,9 @@ var server = http.createServer(function(req, res) {
 
 export default server
 
-// Go to ./index.jsx, where our app is initialized. For those of you who are not familiar with webpack,
+// Go to ./index.jsx, where our app is initialized. For those of you who are not familiar with Webpack,
 // ./index.jsx로 가라, 그 곳에서 우리의 앱은 초기화된다. webpack과 친숙하지 않은 사람들을 위해서,
-// index.jsx is defined as the entry point (the first file) of our JS bundle (in 12_src/webpack.config.js)
+// index.jsx is defined as the entry point (the first file) of our JS bundle (in 11_src/webpack.config.js)
 // index.jsx는 우리 JS 번들의 엔트리 포인트로써 정의된다(in 12_src/webpack.config.js)
 // and is automatically executed when the JS bundle is loaded in our browser.
 // 그리고 자동적으로 실행된다 번들이 우리 브라우저에 로드 되었을 때.

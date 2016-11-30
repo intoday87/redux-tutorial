@@ -14,8 +14,8 @@ import createStore from './create-store'
 // 우리 어플리케이션의 루트 컴포넌트는 어플리케이션이고 Redux 프로바이더를 유지하고 있다...
 import Application from './application'
 
-// Just as we did so many times in previous examples, we need to create our redux instance. This time
-// 우리가 단지 이전 예제헤서 매번 했던 것처럼, 우리는 우리의 redux 인스턴스를 생성하는 것을 필요로 한다. 이번에는
+// Just as we did so many times in previous examples, we need to create our Redux instance. This time
+// 우리가 단지 이전 예제헤서 매번 했던 것처럼, 우리는 우리의 Redux 인스턴스를 생성하는 것을 필요로 한다. 이번에는
 // all code for that task was moved to a specific module that returns a single function to trigger the
 // 그 태스크에 대한 우리의 모든 코드가 인스턴스화를 발생시키기 위한 하나의 함수를 리턴하는 하나의 구체적인 모듈로 이동되어야 한다는
 // instantiation.
@@ -28,7 +28,7 @@ const store = createStore()
 // 단지 render만으로: import { render } from 'react-dom')...
 render(
   // ... and to provide our Redux store to our Root component as a prop so that Redux
-	// ... 그리고 우리의 Redux store를 우리의 루트 컴포넌트에 프로퍼티로 제공하기 위해서 Redux Provider  
+	// ... 그리고 우리의 Redux store를 우리의 루트 컴포넌트에 프로퍼티로 제공하기 위해서 Redux Provider
   // Provider can do its job.
   // 그의 일을 할 수 있다.
   <Application store={store} />,

@@ -32,14 +32,14 @@ import promiseMiddleware from './promise-middleware'
 // ./reducers.js를 봐라 우리의 reducer가 실제로 하려는 것이 무엇인지.(그곳에 마법은 없다).
 import * as reducers from './reducers'
 
-// The data parameter that we see here is used to initialize our redux store with data. We didn't
+// The data parameter that we see here is used to initialize our Redux store with data. We didn't
 // data 파라미터 그것은 우리의 redux store를 데이터와 함게 초기화시키기 위해서 여기서 사용되는 것을 볼 수 있다.
 // talk about this yet for simplicity but thanks to it your reducers can be initialized
 // 우리는 단순함을 위해서 아직 이것에 대해 얘기를 하지 않았다 그러나 그것 덕분에 너의 reducer들은 만약 너가
 // with real data if you already have some. For example in an isomorphic/universal app where you
 // 이미 어떤 데이터를 가지고 있다면 실제 데이터와 초기화 될 수 있다. 예를 들어 isomorphic/universal 앱에서
 // fetch data server-side, serialize and pass it to the client, your Redux store can be
-// 너가 서버쪽 데이터를 가져오면(fetch), 직렬화고 그리고 그것을 클라이언트에 건내주고, 너의 Redux store는 
+// 너가 서버쪽 데이터를 가져오면(fetch), 직렬화고 그리고 그것을 클라이언트에 건내주고, 너의 Redux store는
 // initialized with that data.
 // 그 데이터와 함께 초기화 될 수 있다.
 // We're not passing any data here but it's good to know about this createStore's ability.

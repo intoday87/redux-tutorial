@@ -51,7 +51,7 @@ import server from './11_src/src/server'
 // 만약 포트가 X와 동일하다면, 우리는 X를 서버포트를 위해서 사용할 것이다. 그리고 X+1로 webpack-dev-server의 포트를 사용한다.
 const port = 5050
 
-// Start our webpack dev server...
+// Start our Webpack dev server...
 // webpack 개발 서버를 시작한다.
 webpackDevServer.listen(port)
 // ... and our main app server.
@@ -64,4 +64,4 @@ console.log(`Server is listening on http://127.0.0.1:${port}`)
 // 11_src/src/server.js로 가라...
 
 // Go to next tutorial: 12_final-words.js
-// 다음 튜토리얼로 가라: 12_final-words.js  
+// 다음 튜토리얼로 가라: 12_final-words.js

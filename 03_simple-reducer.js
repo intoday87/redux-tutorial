@@ -29,8 +29,8 @@ var store_0 = createStore(() => {})
 
 // ... so that Redux can call this function on your application state each time an action occurs.
 // ... Redux는 매번 하나의 액션이 일어나는 너의 어플리케이션 상태에 대해서 이 함수를 호출 할 수 있기 위함이다.
-// Giving reducer(s) to createStore is exactly how redux registers the action "handlers" (read reducers) we
-// reducer(s)를 createStore에게 주는 것은 정확히 어떻게 redux가 그 액션 "핸들러"(reducers라고 읽어라)를 등록하는지다.
+// Giving reducer(s) to createStore is exactly how Redux registers the action "handlers" (read reducers) we
+// reducer(s)를 createStore에게 주는 것은 정확히 어떻게 Redux가 그 액션 "핸들러"(reducers라고 읽어라)를 등록하는지다.
 // were talking about in section 01_simple-action-creator.js.
 // 우리가 section 01_simple-action-creator.js에서 애기 했었던 핸들러들(reducers)말이다.
 
@@ -56,11 +56,11 @@ var store_1 = createStore(reducer)
 // When called, a reducer is given those parameters: (state, action)
 // 호출되었을때, 하나의 reducer는 이 파라미터들: (state, action)이 주어진다.
 // It's then very logical that at an application initialization, the state, not being
-// 그것은 그때 매우 논리적인데, 하나의 어플리케이션 초기화에서, 그 상태는, 
+// 그것은 그때 매우 논리적인데, 하나의 어플리케이션 초기화에서, 그 상태는,
 // initialized yet, is "undefined"
 // 아직 초기화되지 않았다. 즉 "undefined"
 
 // But then what is the state of our application after Redux sends its "init" action?
-// 그러나 Redux가 그의 "init"액션을 보내고 난 후에 우리 어플리케이션의 상태는 무엇일까? 
+// 그러나 Redux가 그의 "init"액션을 보내고 난 후에 우리 어플리케이션의 상태는 무엇일까?
 
 // Go to next tutorial: 04_get-state.js

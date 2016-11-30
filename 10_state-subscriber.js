@@ -11,7 +11,7 @@
 // Without it, we cannot update our views when the store changes.
 // 그것 없이는, 우리는 스토어가 변했을 때 우리의 뷰들을 업데이트 할 수 없다.
 
-// Fortunately, there is a very simple way to "watch" over our Redux's store updates:
+// Fortunately, there is a very simple way to "watch" over our Redux store's updates:
 // 불행하게도, Redux의 스토어 업데이트에 대해 "감시(watch)"할 수 있는 매우 단순한 방법이 있다:
 
 /*
@@ -117,7 +117,7 @@ store_0.dispatch(addItemActionCreator({ id: 1234, description: 'anything' }))
 
 // Its simplicity is actually its power! Redux, with its current minimalist API (including "subscribe") is
 // 그것의 단순함은 실제로 그것의 힘이다! Redux, 그것의 현재의 최소한의 API와 함께 (including "subscribe")
-//  highly extensible and this allows developers to build some crazy products like the Redux DevTools
+// highly extensible and this allows developers to build some crazy products like the Redux DevTools
 //  매우 확장가능하고 그리고 이것은 개발자들에게 몇 Redux 개발툴들과 같이 몇몇 미친 제품들을 빌드할 수 있게 해준다.
 // (https://github.com/gaearon/redux-devtools).
 
@@ -132,7 +132,7 @@ store_0.dispatch(addItemActionCreator({ id: 1234, description: 'anything' }))
 
 // So yeah, the "subscribe" method will still be used but it will be done through a higher order API that
 // 그래 좋다, 그 "subscribe" 메소드는 여전히 사용된다 그러나 그것은 더 높은 순서의 API를 통해서 행해질 것이다.
-// handles access to redux state for you.
+// handles access to Redux state for you.
 // 그 API는 너를 위해서 redux의 접근을 컨트롤 한다.
 
 // We'll now cover those bindings and show how simple it is to wire your components to Redux's state.

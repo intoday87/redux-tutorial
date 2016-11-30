@@ -98,7 +98,7 @@ var store_3 = createStore(reducer_3)
 // Output: reducer_3 was called with state {} and action { type: '@@redux/INIT' }
 
 console.log('store_3 state after initialization:', store_3.getState())
-// Output: redux state after initialization: {}
+// Output: store_3 state after initialization: {}
 
 // Nothing new in our state so far since we did not dispatch any action yet. But there are few
 // 아무것도 우리 상태에서 바뀐것은 없다 지금까지 우리는 어떠한 액션도 아직은 수행하지 않았기 때문에. 그러나 몇 가지 중요한
