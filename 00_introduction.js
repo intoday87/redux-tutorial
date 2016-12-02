@@ -13,7 +13,7 @@
 // 그러나 난 단지 스스로 개념을 정확하게 집어내지 못했던 것 뿐이다. 결국에는 나는 단지 다른 flux framework(Reflux, Flummox, FB Flux)
 
 // flux frameworks (Reflux, Flummox, FB Flux) and trying to make them match with the theoretical concept I read
-// 들의 documentation과 그리고 내가 읽은 이론적인 것들에 관해(actions / actions creators, store, dispatcher, etc) 을 적용해보면서
+// 들의 documentation과 그리고 내가 읽은 이론적인 것들(actions / actions creators, store, dispatcher, etc)을 적용해보면서
 
 // about (actions / actions creators, store, dispatcher, etc).
 // match를 시켜보려 시도했던것이다.
@@ -22,13 +22,13 @@
 // 오직 내가 Redux를 사용하기 시작했을때 나는 깨달았었다. flux는 내가 생각한 것보다 더 단순하다. 이것은 모두
 
 // thanks to Redux being very well designed and having removed a lot of "anti-boilerplate features" introduced
-// Redux 덕분이다. 매우 잘 디자인되고 내가 이전에 시도해본 많은 다른 framework들의 "형식적으로 틀에 박힌 특징들에 반하는"것들을 제거했다.
+// 매우 잘 디자인되고 그리고 내가 이전에 시도해본 다른 많은 framework들의 "형식적으로 틀에 박힌 특징들에 반하는" 것들을 제거한 Redux 덕분이다.
 
 // by other frameworks I tried before. I now feel that Redux is a much better way to learn about flux
 // 나는 Redux가 다른 많은 framework들 보다 flux를 배우기 위한 하나의 가장 좋은 방법이라고 느낀다.
 
 // than many other frameworks. That's why I want now to share with everyone, using my own words,
-// 그것은 나는 모두와 공유하기를 원하기 때문이고, 내가 알고 있는 단어들을 사용해서,
+// 때문에 내가 알고 있는 단어들을 사용해서 나는 모두와 함께 공유하기를 원한다, ,
 
 // flux concepts that I am starting to grasp, focusing on the use of Redux.
 // 내가 잡기 시작한 flux개념들을, Redux의 사용에 초점을 맞추면서.
