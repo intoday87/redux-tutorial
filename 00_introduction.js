@@ -28,10 +28,10 @@
 // 나는 Redux가 다른 많은 framework들 보다 flux를 배우기 위한 하나의 가장 좋은 방법이라고 느낀다.
 
 // than many other frameworks. That's why I want now to share with everyone, using my own words,
-// 때문에 내가 알고 있는 단어들을 사용해서 나는 모두와 함께 공유하기를 원한다, ,
+// 때문에 내가 알고 있는 단어들을 사용해서 나는
 
 // flux concepts that I am starting to grasp, focusing on the use of Redux.
-// 내가 잡기 시작한 flux개념들을, Redux의 사용에 초점을 맞추면서.
+// 내가 잡기 시작한 flux개념들을, Redux의 사용에 초점을 맞춰, 모두와 함께 공유하기를 원한다.
 
 // You may have seen this diagram representing the famous unidirectional data flow of a flux application:
 // 너는 아마 이 그 유명한 비방향성 데이터 흐름 flux 어플리케이션의 다이어그램을 본적이 있을 것이다
@@ -71,13 +71,13 @@
 // Let's pretend we're building a web application. What are all web applications made of?
 // 우리가 하나의 웹 어플리케이션을 구축하고 있다고 가정해 보자. 모든 웹 어플리케이션들이 무엇으로 구성되어 있지?
 // 1) Templates / html = View
-// 1) 템플릿들 / html = view - 보통 view가 html이고 하나의 데이터를 주어서 구성되기 전의 view를 템플릿이라고 한다.
+// 1) 템플릿들 / html = View
 // 2) Data that will populate our views = Models
 // 2) Data 그것은 우리들의 view를 양산할 것이다. = Models
 // 3) Logic to retrieve data, glue all views together and to react accordingly to user events,
-// 3) 데이터를 추출해내고, view들을 모두 함께 붙이고 그리고 사용자 이벤트들에 반응하기 위한, 
+// 3) 데이터를 추출하고, view들을 모두 함께 붙이고 그리고 사용자 이벤트들과,
 //    data modifications, etc. = Controller
-//    데이터 수정 등등의 로직 = controller
+//    데이터 수정들에 반응하기 위한 로직, 등등 = controller
 
 // This is the very classic MVC that we all know about. But it actually looks like concepts of flux,
 // 이것은 매우 전통적인 우리 모두가 아는 MVC다. 그러나 그것은 실제로 flux의 concept들인데,
@@ -89,7 +89,7 @@
 // - user events, data modifications and their handlers look like
 // - user events, data 수정 그리고 그들의 핸들러들은
 //   "action creators" -> action -> dispatcher -> callback
-//   "action creators" -> action -> dispatcher -> callback과 비슷하다.
+//   "action creators" -> action -> dispatcher -> callback"와 닮았다.
 // - Views look like React views (or anything else as far as flux is concerned)
 // - View들은 React view들과 비슷하다(또는 flux와 관련이 적은 어떤 것이든)
 
@@ -98,7 +98,7 @@
 // these new terms we are now able to express more precisely things that were regrouped under
 // 우리가 그것들을 재그룹화된(regrouped) 다양한 용어들로부터 이제는 더 정확하게 표현할 수 있기 때문이다...
 // various terminologies... For example, isn't a data fetch an action? Just like a click is also an action?
-// 예를들어, data fetch는 action이 아닌가? 단지 클릭이 또한 액션과 같은것일까?
+// 예를들어, data를 가져오는것이 액션 아닌가? 단지 클릭과 같은 것이 또한 액션일까?
 // And a change in an input is an action too... Then we're all already used to issuing actions from our
 // 그리고 입력으로부터 변화는 마찬가지로 액션인가.. 그리고나서 우리는 이미 모두 우리의 어플리케이션으로부터 액션들을 발행(issue)하는 것이 익숙하다.
 // applications, we were just calling them differently. And instead of having handlers for those
@@ -126,9 +126,9 @@
 // Finding the source of a bug in such an environment when something goes wrong can become quite challenging
 // 무언가가 잘 못 되어서 이와 같은 환경에서 소스의 버그를 찾는 것은 꽤 도전적인 일이다.
 // very quickly. This is because every View can watch every Model, and every Model can watch other Models, so
-// 그것도 매우 빠르게.  이것은 때문인데 모든 뷰가 모든 모델을 감시할 수 있다. 그리고 모든 모델은 다른 모델을 감시할 수 있다, 그래서  
+// 그것도 매우 빠르게.  이것은 모든 뷰가 모든 모델을 감시할 수 있고, 그리고 모든 모델은 다른 모델을 감시할 수 있기 때문이다, 그래서
 // basically data can arrive from a lot of places and be changed by a lot of sources (any views or any models).
-// 기본적으로 데이터는 많은 곳으로 부터 도착할 수 있다. 그리고 많은 소스로부터 변화될 수 있다. (어떤 뷰들 또는 어떤 모델들이든지).
+// 기본적으로 데이터는 많은 곳으로 부터 도착할 수 있으며 그리고 많은 소스로부터 변화될 수 있다. (어떤 뷰들 또는 어떤 모델들이든지).
 
 // Whereas when using flux and its unidirectional data flow, the example above could become:
 // 반면에 flux와 그리고 그것의 비방향성 데이터 흐름을 사용할 때, 위의 예시는 이와 같이 될 수 있다:
