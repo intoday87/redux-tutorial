@@ -34,7 +34,7 @@
 // 내가 잡기 시작한 flux개념들을, Redux의 사용에 초점을 맞춰, 모두와 함께 공유하기를 원한다.
 
 // You may have seen this diagram representing the famous unidirectional data flow of a flux application:
-// 너는 아마 이 그 유명한 비방향성 데이터 흐름 flux 어플리케이션의 다이어그램을 본적이 있을 것이다
+// 너는 아마 이 그 유명한 단방향성 데이터 흐름 flux 어플리케이션의 다이어그램을 본적이 있을 것이다
 
 /*
                  _________               ____________               ___________
@@ -131,7 +131,7 @@
 // 기본적으로 데이터는 많은 곳으로 부터 도착할 수 있으며 그리고 많은 소스로부터 변화될 수 있다. (어떤 뷰들 또는 어떤 모델들이든지).
 
 // Whereas when using flux and its unidirectional data flow, the example above could become:
-// 반면에 flux와 그리고 그것의 비방향성 데이터 흐름을 사용할 때, 위의 예시는 이와 같이 될 수 있다:
+// 반면에 flux와 그리고 그것의 단방향성 데이터 흐름을 사용할 때, 위의 예시는 이와 같이 될 수 있다:
 // 1) user clicks on button "A"
 // 1) 버튼 "A"에 대해 사용자 클릭들.
 // 2) a handler on button "A" triggers an action that is dispatched and produces a change on Store "A"
