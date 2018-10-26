@@ -14,11 +14,11 @@
 // It's more simple than you could imagine: A Store keeps your data in it while a Reducer doesn't.
 // 그것은 너가 상상하는 것 보다 더 단순하다: Store는 데이터를 안에 유지하는 반면에 Reducer는 그렇지 않다.(Reducer는 순수함수이다)
 // So in traditional flux, stores hold state in them while in Redux, each time a reducer is
-// 전통적인 flux 에서 stores는 상태를 그들안에서 유지하지만 반면에 Redux안에서, 매번 하나의 reducer는
+// 전통적인 flux 에서, Redux에서 store들은 상태를 그들안에 유지하지만. 호출되는 하나의 reducer는
 // called, it is passed the state that needs to be updated. This way, Redux's stores became
-// 호출되고, 업데이트가 되기를 필요로 하는 상태가 동과된다. 이 방식은, Redux의 stores는
+// 수정을 필요로 하는 상태가 통과된다. 이 방식은, Redux의 store들은
 // "stateless stores" and were renamed reducers.
-// "상태없는 stores"가 되고 그리고 reducers로 이름이 바뀌었다.
+// "상태없는 store들"이 되고 reducer들로 이름이 바뀌었다.
 
 // As stated before, when creating a Redux instance you must give it a reducer function...
 // 시작하기전에, 하나의 Redux 인스턴스를 생성할 때 너는 반드시 하나의 reducer 함수를 건내주어야 한다...
