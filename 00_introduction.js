@@ -96,7 +96,7 @@
 // So is flux just a matter of new vocabulary? Not exactly. But vocabulary DOES matter, because by introducing
 // 그래서 flux는 단지 새로운 용어의 문제인가? 정확히는 아니다. 그러나 용어는 문제가 된다. 왜냐하면 이 새로운 용어들을 소개함으로써
 // these new terms we are now able to express more precisely things that were regrouped under
-// 우리가 그것들을 재그룹화된(regrouped) 다양한 용어들로부터 이제는 더 정확하게 표현할 수 있기 때문이다...
+// 우리가 그것들을 재그룹화된(regrouped) 다양한 용어들로부터 더 정확하게 표현할 수 있기 때문이다...
 // various terminologies... For example, isn't a data fetch an action? Just like a click is also an action?
 // 예를들어, data를 가져오는것이 액션 아닌가? 단지 클릭과 같은 것이 또한 액션일까?
 // And a change in an input is an action too... Then we're all already used to issuing actions from our
@@ -124,9 +124,9 @@
 // 4) Model "B"의 변화에 대한 핸들러는 view "B"의 변화를 촉발한다. 그 변화로 인해 그 자신을 재렌더할 것이다. 
 
 // Finding the source of a bug in such an environment when something goes wrong can become quite challenging
-// 무언가가 잘 못 되어서 이와 같은 환경에서 소스의 버그를 찾는 것은 꽤 도전적인 일이다.
+// 무언가가 잘 못 되어서 이와 같은 환경에서 매우 빠르게 소스의 버그를 찾는 것은 꽤 도전적인 일이다.
 // very quickly. This is because every View can watch every Model, and every Model can watch other Models, so
-// 그것도 매우 빠르게.  이것은 모든 뷰가 모든 모델을 감시할 수 있고, 그리고 모든 모델은 다른 모델을 감시할 수 있기 때문이다, 그래서
+// 이것은 모든 뷰가 모든 모델을 감시할 수 있고, 그리고 모든 모델은 다른 모델을 감시할 수 있기 때문이다, 그래서
 // basically data can arrive from a lot of places and be changed by a lot of sources (any views or any models).
 // 기본적으로 데이터는 많은 곳으로 부터 도착할 수 있으며 그리고 많은 소스로부터 변화될 수 있다. (어떤 뷰들 또는 어떤 모델들이든지).
 
@@ -144,7 +144,7 @@
 // See how we avoid directly linking Store A to Store B? Each store can only be
 // 어떻게 직접적으로 Store A에서 Store B로 가는 것을 피할 수 있는지 볼 수 있는가? 각각 store는 오직
 // modified by an action and nothing else. And once all stores have replied to an action,
-// 하나의 액션에 대해서만 수정될 수 있다. 그리고 그 어떤것으로 부터도 아니다.
+// 하나의 액션에 대해서만 수정될 수 있으며 그 어떤것으로 부터도 수정될 수 없다.
 // views can finally update. So in the end, data always flows in one way:
 // view들은 결국 업데이트 될 수 있다. 그리고 결국에, 데이터는 언제나 한 방향으로만 흘러간다.
 //     action -> store -> view -> action -> store -> view -> action -> ...
