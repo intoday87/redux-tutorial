@@ -8,11 +8,11 @@
 // A word about reducer VS store:
 // reducer VS store라는 단어:
 // As you may have noticed, in the flux diagram shown in the introduction, we had "Store", not
-// 너가 아마 주목했듯이, 이전 소개에서 보여준 flux 다이어그램에서, 우리는 "Store"를 가졌지,
+// 너가 아마 주목했듯이, 이전 소개에서 보여준 flux 다이어그램에서, 우리는 "Store"를 봤었다,
 // "Reducer" like Redux is expecting. So how exactly do Store and Reducer differ?
 // Redux에서 기대하는것과 같은 "Reducer"는 아니다. 그래서 어떻게 정확히 Store 그리고 Reducer는 다른가?
 // It's more simple than you could imagine: A Store keeps your data in it while a Reducer doesn't.
-// 그것은 너가 상상하는 것 보다 더 단순하다: 하나의 Store는 하나의 reducer가 그렇게 하지 않는 반면에 너의 데이터를 그것 안에 유지한다.
+// 그것은 너가 상상하는 것 보다 더 단순하다: Store는 데이터를 안에 유지하는 반면에 Reducer는 그렇지 않다.(Reducer는 순수함수이다)
 // So in traditional flux, stores hold state in them while in Redux, each time a reducer is
 // 전통적인 flux 에서 stores는 상태를 그들안에서 유지하지만 반면에 Redux안에서, 매번 하나의 reducer는
 // called, it is passed the state that needs to be updated. This way, Redux's stores became
